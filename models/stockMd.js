@@ -113,6 +113,9 @@ exports.InsertItemDefineHdr = async (transactionObj,payLoad) => {
             request
                 .input('ItemDefineId', sqlObj.Int, payLoad['ItemDefineId'])
                 .input('ItemId', sqlObj.Int, payLoad['ItemId'])
+                .input('ItemCd', sqlObj.VarChar(20), payLoad['ItemCode'])
+                .input('ItemDs', sqlObj.VarChar(100), payLoad['ItemDs'])
+                .input('Qty', sqlObj.Int, payLoad['Qty'])
                 .input('TotalMaterialCost', sqlObj.Money, payLoad['TotalMaterialCost'])
                 .input('WaistPer', sqlObj.Money, payLoad['WaistPer'])
                 .input('WaistAmount', sqlObj.Money, payLoad['WaistAmount'])
